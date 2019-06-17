@@ -2,7 +2,7 @@
 [Nodejs > 12.0](https://nodejs.org/en/)  
 [Puppeteer](https://github.com/GoogleChrome/puppeteer)
 
-### Jenkins file uses
+### Jenkins file uses:
 ```groovy  
 agent {  
   docker {      
@@ -11,7 +11,7 @@ agent {
    }  
  }  
 ```   
-### Puppetter launch config
+### Puppetter launch config:
 ```javascript   
 const browser = await puppeteer.launch(
       {
@@ -28,6 +28,7 @@ const browser = await puppeteer.launch(
        }
    );
 ```
+### package.json  
 ```json
 "dependencies": {
     "jest": "^24.8.0",
