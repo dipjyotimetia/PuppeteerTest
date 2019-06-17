@@ -6,7 +6,7 @@
 ```groovy  
 agent {  
   docker {      
-      image 'puppeteer:latest'      
+      image 'dipjyotimetia/puppeteertest'      
       args '--privileged'  
    }  
  }  
