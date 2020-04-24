@@ -20,13 +20,4 @@ RUN dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install
 ADD https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_amd64 /usr/local/bin/dumb-init
 RUN chmod +x /usr/local/bin/dumb-init
 
-#Providing all necessary permission to the user jenkins
-RUN groupmod -g 999 node && \
-   usermod -u 999 node
-
-RUN groupadd -g 1000 jenkins && \
-   useradd -u 1000 -g 1000 -m -s /bin/bash jenkins
-
-USER jenkins
-
 ENTRYPOINT ["dumb-init", "--"]
